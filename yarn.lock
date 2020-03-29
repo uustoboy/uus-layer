@@ -1700,6 +1700,11 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+base_mixins@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npm.taobao.org/base_mixins/download/base_mixins-1.0.7.tgz#ca1fa66b80fc92862855018c01ec4df2a871a1b3"
+  integrity sha1-yh+ma4D8koYoVQGMAexN8qhxobM=
+
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.npm.taobao.org/batch/download/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
