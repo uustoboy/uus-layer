@@ -1,0 +1,52 @@
+@charset "UTF-8";
+$global-unit: rem;
+$designWidth : 375;
+.u-layerWrap{
+	@include fixed((
+		t:0,
+		l:0,
+		w:100%,
+		h:100%,
+		z:100
+	));
+	@include flex;
+	@include ai(center);
+	@include jc(center);
+	@include tac;
+	// @include hide();
+}
+.u-layer-mask{
+	@include fixed((
+		t:0,
+		l:0,
+		w:100%,
+		h:100%,
+		z:100
+	));
+	@include bgc(rgba(0,0,0,0.5));
+}
+
+.u-layer-main{
+    @include rel();
+    @include w(270);
+	@include z(102);
+    @include bgc(#fff);
+    @include bdrs(8);
+}
+.u-layer-title{
+
+}
+.u-layer-btnMain{
+	@include flex;
+	@include wh(100%,44);
+	@include bdt(1 solid #ccc);
+}
+
+.u-layer-btn{
+	@include flc(18,44,#666);
+	@include fx(1);
+	@include tac;
+	&:nth-child(2){
+		@include bdl(1px solid #ccc);
+	}
+}

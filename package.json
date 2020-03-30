@@ -1,8 +1,8 @@
 {
   "name": "uus-layer",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": false,
-  "main": "./dist/uus-layer.common.js",
+  "main": "./dist/uus-layer.umd.js",
   "files": [
     "dist/*",
     "src/*",
@@ -33,6 +33,9 @@
     "base_mixins": "^1.0.7",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "node-sass": "^4.13.1",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
     "typescript": "~3.7.5",
     "vue-template-compiler": "^2.6.11"
   }
