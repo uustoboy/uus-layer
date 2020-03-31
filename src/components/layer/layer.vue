@@ -8,8 +8,8 @@
           <div></div>
         </div>
         <div class="u-layer-btnMain">
-          <a href="javascript:;" class="u-layer-btn">确定</a>
-          <a href="javascript:;" class="u-layer-btn" @click="handleCancel(popupSwitch)">取消</a>
+          <a href="javascript:;" class="u-layer-btn" @click="handleEnsure">确定</a>
+          <a href="javascript:;" class="u-layer-btn" @click="handleCancel">取消</a>
         </div>
       </div>
     </div>
@@ -27,11 +27,18 @@ export default class UUSLayer extends Vue {
   })
   private popupSwitch!: boolean;
 
-  @Emit()
-  handleCancel(n: boolean): boolean {
+  @Emit('handleCancel')
+  handleCancel() {
     // console.log(n);
-    return n;
+    // return 0;
   }
+
+  @Emit('handleEnsure')
+  handleEnsure() {
+    // console.log(n);
+    // return 0;
+  }
+  
 }
 </script>
 

@@ -3,7 +3,7 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
     <button @click="click">弹层</button>
-    <UUSLayer @handleCancel="close" :popupSwitch="popupSwitch" />
+    <UUSLayer @handleCancel="close" :popupSwitch="popupSwitch" @handleEnsure="ensure"/>
   </div>
 </template>
 
@@ -23,9 +23,12 @@ export default class App extends Vue {
     this.popupSwitch = true;
   }
 
-  private close(n: boolean): void {
-    console.log(this.popupSwitch);
+   close(): void {
     this.popupSwitch = false;
+  }
+
+  ensure(): void{
+	this.popupSwitch = false;
   }
 }
 </script>
