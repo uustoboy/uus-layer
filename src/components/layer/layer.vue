@@ -1,6 +1,12 @@
 <template>
   <transition name="u-dialog-fade">
-    <div v-if="popupSwitch" class="u-layerWrap" :class="layer.className" :style="layer.style" :id="layer.id">
+    <div
+      v-if="popupSwitch"
+      class="u-layerWrap"
+      :class="layer.className"
+      :style="layer.style"
+      :id="layer.id"
+    >
       <div
         v-if="maskLayer.show"
         class="u-layer-mask"
@@ -35,9 +41,7 @@
               :class="[ensureBtn.className]"
               :style="[ensureBtn.style]"
               @click="handleEnsure"
-            >
-              {{ ensureBtn.text }}
-            </a>
+            >{{ ensureBtn.text }}</a>
             <a
               v-if="cancelBtn.show"
               href="javascript:;"
@@ -45,9 +49,7 @@
               :class="[cancelBtn.className]"
               :style="[cancelBtn.style]"
               @click="handleCancel"
-            >
-              {{ cancelBtn.text }}
-            </a>
+            >{{ cancelBtn.text }}</a>
           </div>
         </slot>
       </div>
@@ -56,7 +58,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Emit } from "vue-property-decorator";
+// import Vue from "vue";
+import { Vue, Component, Prop, Emit } from "vue-property-decorator";
+import "./layer.scss";
 @Component
 export default class UUSLayer extends Vue {
   //显示弹层;
@@ -78,7 +82,7 @@ export default class UUSLayer extends Vue {
       };
     }
   })
-  private cancelBtn!: Record<string, any>;
+  private cancelBtn!: object;
   //确定
   @Prop({
     type: Object,
@@ -91,7 +95,7 @@ export default class UUSLayer extends Vue {
       };
     }
   })
-  private ensureBtn!: Record<string, any>;
+  private ensureBtn!: object;
   //遮罩
   @Prop({
     type: Object,
@@ -103,7 +107,7 @@ export default class UUSLayer extends Vue {
       };
     }
   })
-  private maskLayer!: Record<string, any>;
+  private maskLayer!: object;
   //弹层
   @Prop({
     type: Object,
@@ -115,7 +119,7 @@ export default class UUSLayer extends Vue {
       };
     }
   })
-  private layer!: Record<string, any>;
+  private layer!: object;
   //标题
   @Prop({
     type: Object,
@@ -128,7 +132,7 @@ export default class UUSLayer extends Vue {
       };
     }
   })
-  private title!: Record<string, any>;
+  private title!: object;
   //标题
   @Prop({
     type: Object,
@@ -140,7 +144,7 @@ export default class UUSLayer extends Vue {
       };
     }
   })
-  private center!: Record<string, any>;
+  private center!: object;
 
   @Emit("handleCancel")
   handleCancel() {
