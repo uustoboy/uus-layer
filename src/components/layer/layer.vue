@@ -58,9 +58,7 @@
 </template>
 
 <script lang="ts">
-// import Vue from "vue";
 import { Vue, Component, Prop, Emit } from "vue-property-decorator";
-import "./layer.scss";
 @Component
 export default class UUSLayer extends Vue {
   //显示弹层;
@@ -148,20 +146,17 @@ export default class UUSLayer extends Vue {
 
   @Emit("handleCancel")
   handleCancel() {
-    // console.log(n);
-    // return 0;
+    return;
   }
 
   @Emit("handleEnsure")
   handleEnsure() {
-    // console.log(n);
-    // return 0;
+    return;
   }
 
   @Emit("handlemMask")
   handlemMask() {
-    // console.log(n);
-    // return 0;
+    return;
   }
 }
 </script>
@@ -249,9 +244,6 @@ $designWidth: 375;
 
 .u-dialog-fade-enter-active {
   @include css3(animation, dialog-fadein 0.4s);
-  // .u-layer-mask {
-  //   @include css3(animation, dialog-fadein 0.4s);
-  // }
   .u-layer-main {
     @include css3(animation, dialog-zoom 0.4s);
   }
@@ -259,6 +251,9 @@ $designWidth: 375;
 
 .u-dialog-fade-leave-active {
   @include css3(animation, dialog-fadein-leave 0.2s);
+  .u-layer-main {
+    @include css3(animation, dialog-zoom-leave 0.4s);
+  }
 }
 
 @include keyframes(dialog-fadein) {
@@ -288,6 +283,15 @@ $designWidth: 375;
   }
   100% {
     #{$browser}transform: scale(1);
+  }
+}
+
+@include keyframes(dialog-zoom-leave) {
+  0% {
+    #{$browser}transform: scale(1);
+  }
+  100% {
+    #{$browser}transform: scale(0.8);
   }
 }
 </style>

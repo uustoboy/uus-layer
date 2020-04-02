@@ -1,6 +1,6 @@
 {
   "name": "uus-layer",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "main": "./dist/uus-layer.umd.js",
   "files": [

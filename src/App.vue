@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
     <button @click="click">弹层</button>
     <UUSLayer
       @handleCancel="close"
@@ -10,11 +8,7 @@
       @handlemMask="mask"
       :center="popCenter"
       :title="popTitle"
-    >
-      <!-- <template slot="center">
-        <h1>Here might be a page title</h1>
-      </template>-->
-    </UUSLayer>
+    ></UUSLayer>
   </div>
 </template>
 
@@ -30,7 +24,7 @@ import UUSLayer from "./components/layer/layer.vue";
 export default class App extends Vue {
   popupSwitch = false;
   popCenter = {
-    text: "确定领取水晶年费会员<Br/>160元优惠券吗？"
+    text: "弹层内容？"
   };
   popTitle = {
     show: true,
